@@ -126,21 +126,21 @@ For script
 
 minikube
 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe
-move minikube-windows-amd64.exe C:\Windows\System32\minikube.exe
-minikube start --driver=docker
-minikube kubectl -- get pods -A
-kubectl create deployment mynginx --image=nginx
-kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
-kubectl scale deployment mynginx --replicas=4
-kubectl get service myngnix
-kubectl port-forward svc/mynginx 8081:80
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe\n
+move minikube-windows-amd64.exe C:\Windows\System32\minikube.exe\n
+minikube start --driver=docker\n
+minikube kubectl -- get pods -A\n
+kubectl create deployment mynginx --image=nginx\n
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80\n
+kubectl scale deployment mynginx --replicas=4\n
+kubectl get service myngnix\n
+kubectl port-forward svc/mynginx 8081:80\n
 
 
 nagios
 
-docker pull jasonrivers/nagios:latest
-docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+docker pull jasonrivers/nagios:latest\n
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest\n
 
 
 Jenkins ci webhook
@@ -152,12 +152,12 @@ Jenkins ci webhook
 aws
 
 1. create ec2 isntaance, new keypair, launch and connect to the instance with ubuntu os
-ssh -I
-sudo apt update
-sudo apt-get install docker.io
-sudo apt install git
-Sudo apt install nano
-git clone
-Nano Dockerfile FROM nginx:alpine COPY . /usr/share/nginx/html FROM tomcat:9-jdk11 COPY target/*.war /usr/local/tomcat/webapps
-sudo docker build -t mywebapp .
-sudo docker run –d –p 80:80 mywebapp
+ssh -I\n
+sudo apt update\n
+sudo apt-get install docker.io\n
+sudo apt install git\n
+Sudo apt install nano\n
+git clone\n
+Nano Dockerfile FROM nginx:alpine COPY . /usr/share/nginx/html FROM tomcat:9-jdk11 COPY target/*.war /usr/local/tomcat/webapps\n
+sudo docker build -t mywebapp . \n
+sudo docker run –d –p 80:80 mywebapp\n
